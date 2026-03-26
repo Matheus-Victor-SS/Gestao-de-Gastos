@@ -1,3 +1,25 @@
+#tabela{
+    margin-top: 260px;
+    background-color: aliceblue;
+    height: 95%;
+    width: 90%;
+    border-radius: 20px;
+}
+.container-pai {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-between; /* Espaça as caixas uniformemente */
+    gap: 20px; /* Espaço entre as caixas */
+    width: 100%;
+    padding: 10px;
+}
+
+.caixa {
+    flex: 1; /* Faz as caixas crescerem igualmente (tamanho igual) */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
 
 #motivos {
     display: flex;
