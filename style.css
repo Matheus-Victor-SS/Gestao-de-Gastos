@@ -1,6 +1,12 @@
+body{
+    background-color: rgb(234, 255, 202);
+}
+h1{
+    color: rgb(0, 78, 0);
+}
 #tabela{
     margin-top: 260px;
-    background-color: aliceblue;
+    background-color: rgb(253, 253, 253);
     height: 95%;
     width: 90%;
     border-radius: 20px;
@@ -15,13 +21,13 @@
 
 .caixa {
     flex: 1; /* Faz as caixas crescerem igualmente (tamanho igual) */
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
 }
 
-button{
+#add{
     background-color: greenyellow;
     border-color: transparent;
     border-radius: 20px;
