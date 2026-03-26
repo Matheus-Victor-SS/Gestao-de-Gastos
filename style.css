@@ -9,7 +9,7 @@
     display: flex; /* Ativa o Flexbox */
     justify-content: space-between; /* Espaça as caixas uniformemente */
     gap: 20px; /* Espaço entre as caixas */
-    width: 100%;
+    width: 90%;
     padding: 10px;
 }
 
@@ -21,6 +21,19 @@
     text-align: center;
 }
 
+button{
+    background-color: greenyellow;
+    border-color: transparent;
+    border-radius: 20px;
+    color: whitesmoke;
+    margin-top: 20px;
+    font-weight: 900;
+    font: bolder, 20pt 'Arial Black';
+    height: 40px;
+    width: 120px;
+    -webkit-text-stroke-width: 0.3px; /* Largura leve */
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
 #motivos {
     display: flex;
     justify-content: center;
