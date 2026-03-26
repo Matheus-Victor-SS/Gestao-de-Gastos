@@ -1,0 +1,46 @@
+
+#motivos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.item {
+    padding: 10px;
+    text-align: center;
+    width: 90px;
+    border-radius: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+/*Cores*/
+.investimento {
+    background-color: green;
+}
+
+.viagem {
+    background-color: blue;
+}
+
+.casa {
+    background-color: brown;
+}
+
+.compras {
+    background-color: purple;
+}
+.carro {
+    background-color: rgb(0, 125, 184);
+}
+.outro {
+    background-color: rgb(145, 145, 145);
+}
+
+/*Aplica em todos*/
+.item:hover {
+    opacity: 0.8;
+}

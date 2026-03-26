@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organização Financeira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+    <h1>ORGANIZAÇÃO</h1>
+    <button id="add">NOVO+</button>
+
+<dialog id="cont">
+    <p>Descrição</p><br>
+    <input type="text" id="text">
+    <p>Quantia</p><br>
+    <input type="number" id="num">
+    <p>Categoria</p><br>
+    <div id="motivo">
+        <div class="item investimento" onclick="selecionar('investimento')">Investimento</div>
+        <div class="item viagem" onclick="selecionar('Viagem')">Viagem</div>
+        <div class="item casa" onclick="selecionar('Casa')">Casa</div>
+        <div class="item compras" onclick="selecionar('Compras')">Compras</div>
+        <div class="item carro" onclick="selecionar('Carro')">Carro</div>
+        <div class="item outro" onclick="selecionar('Outro')">Outro</div>
+    </div>
+    <p id="escolhido">Nenhum selecionado</p>
+    <br><br>
+    <input type="button" value="Guardar" id="btn">
+    <input type="button" value="Fechar" id="close">
+</dialog>
+<table id="tabela">
+    <tr>
+        <th>Descrição</th>
+        <th>Quantia</th>
+        <th>Categoria</th>
+        <th>Tipo</th>
+        <th>Data</th>
+        <th>Ação</th>
+    </tr>
+    <tbody>
+        
+    </tbody>
+</table>
+</center>
+    <script src="script.js"></script>
+</body>
+</html>
