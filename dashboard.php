@@ -1,3 +1,19 @@
+<?php
+session_start();
+
+// se NÃO estiver logado
+if (!isset($_SESSION['id'])) {
+
+    // tenta recuperar pelo cookie
+    if (isset($_COOKIE['id'])) {
+        $_SESSION['id'] = $_COOKIE['id'];
+    } else {
+        header("Location: login.html");
+        exit;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -49,7 +65,18 @@
         
     </tbody>
 </table>
+<a href="logout.php">
+    <button>Sair</button>
+</a>
 </center>
     <script src="script.js"></script>
+    <?php
+session_start();
+
+session_destroy();
+setcookie("id", "", time() - 3600);
+
+header("Location: login.html");
+?>
 </body>
 </html>
