@@ -19,17 +19,13 @@
     <center>
     <div id="cont">
                 <h1>CADASTRO</h1>
-    <form action="salvar.php" method="post">
-        <br><br>
-    <input type="text" name="nome" placeholder="Nome" required><br><br>
-    
-    <input type="email" name="email" placeholder="Email" required><br><br>
-    
-    <input type="password" name="senha" placeholder="Senha" required><br><br>
-
-    <input type="number" name="money" placeholder="Salário/rendimentos" step="0.01" required><br><br>
-    
+<form action="salvar.php" method="post">
+    <input type="text" name="nome" required>
+    <input type="email" name="email" required>
+    <input type="password" name="senha" required>
+    <input type="number" name="salario" step="0.01" required>
     <button type="submit">Cadastrar</button>
+</form>
 </form>
     </div>
    <a href="index.html" id="cad">Clique aqui se já tiver uma conta</a>
