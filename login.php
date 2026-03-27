@@ -28,6 +28,7 @@ if ($result->num_rows > 0) {
         }
 
         header("Location: dashboard.php");
+        exit;
 
     } else {
         echo "Senha errada";

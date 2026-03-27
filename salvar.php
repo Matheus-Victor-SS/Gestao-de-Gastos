@@ -21,7 +21,17 @@ $sql = "INSERT INTO usuarios (nome, email, senha, salario)
         VALUES ('$nome', '$email', '$senha', '$salario')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Cadastro com salário salvo!";
+
+    // inicia sessão
+    session_start();
+
+    // pega o ID do usuário recém criado
+    $_SESSION['id'] = $conn->insert_id;
+
+    // redireciona
+    header("Location: dashboard.php");
+    exit;
+
 } else {
     echo "Erro: " . $conn->error;
 }

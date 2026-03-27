@@ -8,7 +8,7 @@ if (!isset($_SESSION['id'])) {
     if (isset($_COOKIE['id'])) {
         $_SESSION['id'] = $_COOKIE['id'];
     } else {
-        header("Location: login.html");
+        header("Location: index.html");
         exit;
     }
 }
@@ -70,13 +70,5 @@ if (!isset($_SESSION['id'])) {
 </a>
 </center>
     <script src="script.js"></script>
-    <?php
-session_start();
-
-session_destroy();
-setcookie("id", "", time() - 3600);
-
-header("Location: login.html");
-?>
 </body>
 </html>
