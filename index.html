@@ -3,53 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organização Financeira</title>
-    <link rel="stylesheet" href="style.css">
+    <title>LOGIN</title>
+    <style>
+        #cont{
+            background-color: aquamarine;
+            height: 80%;
+            width: 40%;
+            margin-top: 30%;
+            display: flex;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
     <center>
-    <h1>ORGANIZAÇÃO</h1>
-    <div class="container-pai">
-    <div class="caixa">Conteúdo 1</div>
-    <div class="caixa">Conteúdo 2</div>
-    <div class="caixa">Conteúdo 3</div>
-</div>
-
-    <button id="add">ADICIONAR</button>
-
-<dialog id="cont">
-    <p>Descrição</p><br>
-    <input type="text" id="text">
-    <p>Quantia</p><br>
-    <input type="number" id="num">
-    <p>Categoria</p><br>
-    <div id="motivo">
-        <div class="item investimento" onclick="selecionar('investimento')">Investimento</div>
-        <div class="item viagem" onclick="selecionar('Viagem')">Viagem</div>
-        <div class="item casa" onclick="selecionar('Casa')">Casa</div>
-        <div class="item compras" onclick="selecionar('Compras')">Compras</div>
-        <div class="item carro" onclick="selecionar('Carro')">Carro</div>
-        <div class="item outro" onclick="selecionar('Outro')">Outro</div>
+    <div id="cont">
+                <h1>LOGIN</h1>
+    <form action="salvar.php" method="post">
+        <br><br>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Senha</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Lembre de mim</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
     </div>
-    <p id="escolhido">Nenhum selecionado</p>
-    <br><br>
-    <input type="button" value="Guardar" id="btn">
-    <input type="button" value="Fechar" id="close">
-</dialog>
-<table id="tabela">
-    <tr>
-        <th>Descrição</th>
-        <th>Quantia</th>
-        <th>Categoria</th>
-        <th>Tipo</th>
-        <th>Data</th>
-        <th>Ação</th>
-    </tr>
-    <tbody>
-        
-    </tbody>
-</table>
-</center>
-    <script src="script.js"></script>
+   <a href="cadastro.html" id="cad">Clique aqui para criar uma conta</a>
+
+<script>
+
+</script>
 </body>
 </html>
