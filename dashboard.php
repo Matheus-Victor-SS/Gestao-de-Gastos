@@ -1,10 +1,7 @@
 <?php
 session_start();
 
-// se NÃO estiver logado
 if (!isset($_SESSION['id'])) {
-
-    // tenta recuperar pelo cookie
     if (isset($_COOKIE['id'])) {
         $_SESSION['id'] = $_COOKIE['id'];
     } else {
@@ -12,6 +9,21 @@ if (!isset($_SESSION['id'])) {
         exit;
     }
 }
+
+// conectar banco
+$conn = new mysqli("localhost", "root", "", "controle_financeiro");
+
+// pegar id do usuário
+$id = $_SESSION['id'];
+
+// buscar salário
+$sql = "SELECT salario FROM usuarios WHERE id = $id";
+$result = $conn->query($sql);
+
+$user = $result->fetch_assoc();
+$salario = $user['salario'];
+
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +38,7 @@ if (!isset($_SESSION['id'])) {
     <center>
     <h1>ORGANIZAÇÃO</h1>
     <div class="container-pai">
-    <div class="caixa">Conteúdo 1</div>
+    <div class="caixa" id='salarioBox'></div>
     <div class="caixa">Conteúdo 2</div>
     <div class="caixa">Conteúdo 3</div>
 </div>
@@ -69,6 +81,11 @@ if (!isset($_SESSION['id'])) {
     <button>Sair</button>
 </a>
 </center>
-    <script src="script.js"></script>
+<script>
+        // passa o salario de php para o js com valor padrão
+        let salario = <?php echo json_encode(floatval($salario)); ?>;
+        console.log("Salário carregado:", salario);
+    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
